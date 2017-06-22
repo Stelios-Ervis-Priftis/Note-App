@@ -6,7 +6,11 @@ const fs = require('fs');
 // os.userInfo method return information about the currently effective User
 const os = require('os');
 
-var user = os.userInfo();
-console.log(user);
+// require my own file or function
+const notes = require('./notes.js');
 
-fs.appendFile('greeting.txt', `Hello ${user.username}!`);
+console.log('Result:', notes.add(9, 20));
+
+// var user = os.userInfo();
+//
+// fs.appendFile('greeting.txt', `Hello ${user.username}! You are ${notes.age}.`);
