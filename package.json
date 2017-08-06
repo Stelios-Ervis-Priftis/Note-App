@@ -1,0 +1,19 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "# Welcome to Note-App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ervis-Priftis/Note-App.git"
+  },
+  "author": "Ervis Priftis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ervis-Priftis/Note-App/issues"
+  },
+  "homepage": "https://github.com/Ervis-Priftis/Note-App#readme"
+}
