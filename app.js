@@ -7,8 +7,8 @@ const yargs = require('yargs');
 
 const notes = require('./notes.js'); // require my own file or function
 
-var argv = yargs.argv;
-var command = argv._[0];
+const argv = yargs.argv;
+const command = argv._[0];
 console.log(`Command: ${command}`);
 console.log('Yargs:', argv);
 
