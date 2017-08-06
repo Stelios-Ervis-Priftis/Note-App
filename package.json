@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ervis-Priftis/Note-App/issues"
   },
-  "homepage": "https://github.com/Ervis-Priftis/Note-App#readme"
+  "homepage": "https://github.com/Ervis-Priftis/Note-App#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
