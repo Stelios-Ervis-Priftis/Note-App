@@ -2,21 +2,28 @@ console.log('Starting notes.js');
 // fs for witreFileSync and readFileSync
 const fs = require('fs');
 
+let fetchNotes = () => {
+  try {
+    let notesString = fs.readFileSync('notes-data/notes-data.json');
+    return notes = JSON.parse(notesString);
+  } catch (e) {
+    return [];
+  }
+};
+
+let saveNotes = (notes) => {
+  // Create json file and stringify the notes
+  fs.writeFileSync('notes-data/notes-data.json', JSON.stringify(notes));
+};
+
 let addNote = (title, body) => {
-  // Empty Array that will store are note
-  let notes = [];
+  // fetchNotes is Empty Array that will store are note
+  let notes = fetchNotes();
   // Object of note that we create
   let note = {
     title,
     body
   };
-
-  try {
-    let notesString = fs.readFileSync('notes-data/notes-data.json');
-    notes = JSON.parse(notesString);
-  } catch (e) {
-
-  }
   // Checking if we have duplicate title
   let duplicateNotes = notes.filter((note) => note.title === title);
   // console.log('This is the duplicate note:', Boolean(duplicateNotes));
@@ -24,11 +31,9 @@ let addNote = (title, body) => {
   if (duplicateNotes.length === 0) {
     // Push the note on the notes empty array
     notes.push(note);
+    saveNotes(notes);
+    return note;
     console.log(JSON.stringify(notes));
-    // Create json file and stringify the notes
-    fs.writeFileSync('notes-data/notes-data.json', JSON.stringify(notes));
-  } else {
-    console.log(JSON.stringify(note.title + ': Title Already exist'));
   }
 };
 
