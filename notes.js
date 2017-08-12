@@ -1,4 +1,3 @@
-console.log('Starting notes.js');
 // fs for witreFileSync and readFileSync
 const fs = require('fs');
 
@@ -38,7 +37,7 @@ let addNote = (title, body) => {
 };
 
 let getAll = () => {
-  console.log(`Getting all notes`);
+  return fetchNotes();
 };
 
 let getNote = (title) => {
@@ -58,8 +57,6 @@ let removeNote = (title) => {
   return notes.length !== filteredNotes.length
 };
 let logNote = (note) => {
-  // Break on this line and use repl output note
-  debugger;
   console.log('--');
   console.log(`Title: ${note.title}`);
   console.log(`Body: ${note.body}`);
