@@ -57,8 +57,9 @@ let removeNote = (title) => {
 
   return notes.length !== filteredNotes.length
 };
-
 let logNote = (note) => {
+  // Break on this line and use repl output note
+  debugger;
   console.log('--');
   console.log(`Title: ${note.title}`);
   console.log(`Body: ${note.body}`);
